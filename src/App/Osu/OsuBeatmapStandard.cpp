@@ -2008,7 +2008,7 @@ void OsuBeatmapStandard::computeDrainRate()
 						const int rotationsNeeded = (int)((float)spinnerPointer->getDuration() / 1000.0f * OsuGameRules::getSpinnerSpinsPerSecond(this));
 						for (int r=0; r<rotationsNeeded; r++)
 						{
-							testPlayer.increaseHealth(OsuScore::getHealthIncrease(OsuScore::HIT::HIT_SPINNERSPIN, HP, testPlayer.hpMultiplierNormal, testPlayer.hpMultiplierComboEnd, 1.0)); // spinnerspin
+							testPlayer.increaseHealth(OsuScore::getHealthIncrease(OsuScore::HIT::HIT_SPINNERSPIN, HP, testPlayer.hpMultiplierNormal, testPlayer.hpMultiplierComboEnd, 0.0)); // spinnerspin
 						}
 					}
 
