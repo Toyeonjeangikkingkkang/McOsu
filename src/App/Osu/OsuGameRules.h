@@ -130,7 +130,7 @@ public:
 	static inline float getMidHitWindow50() {return osu_hitwindow_50_mid.getFloat();}
 	static inline float getMaxHitWindow50() {return osu_hitwindow_50_max.getFloat();}
 
-	// AR 5 -> 1800 ms
+	// AR 5 -> 1650 ms
 	static float mapDifficultyRange(float scaledDiff, float min, float mid, float max)
 	{
 	    if (scaledDiff > 5.0f)
@@ -153,7 +153,7 @@ public:
 	    return mid;
 	}
 
-	// 1800 ms -> AR 5
+	// 1650 ms -> AR 5
 	static float mapDifficultyRangeInv(float val, float min, float mid, float max)
 	{
 		if (val < mid) // > 5.0f (inverted)
@@ -165,7 +165,7 @@ public:
 	    return 5.0f;
 	}
 
-	// 1800 ms -> AR 5
+	// 1650 ms -> AR 5
 	static float getRawApproachRateForSpeedMultiplier(float approachTime, float speedMultiplier) // ignore all mods and overrides
 	{
 		return mapDifficultyRangeInv(approachTime * (1.0f / speedMultiplier), getRawMinApproachTime(), getRawMidApproachTime(), getRawMaxApproachTime());
